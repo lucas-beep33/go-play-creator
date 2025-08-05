@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				game: {
+					primary: 'hsl(var(--game-primary))',
+					secondary: 'hsl(var(--game-secondary))',
+					accent: 'hsl(var(--game-accent))',
+					success: 'hsl(var(--game-success))',
+					error: 'hsl(var(--game-error))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +91,34 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'flip': {
+					'0%': { transform: 'rotateY(0deg)' },
+					'50%': { transform: 'rotateY(90deg)' },
+					'100%': { transform: 'rotateY(0deg)' }
+				},
+				'bounce-in': {
+					'0%': { transform: 'scale(0.3)', opacity: '0' },
+					'50%': { transform: 'scale(1.05)' },
+					'70%': { transform: 'scale(0.9)' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'pulse-success': {
+					'0%, 100%': { boxShadow: '0 0 0 0 hsl(var(--game-success) / 0.7)' },
+					'70%': { boxShadow: '0 0 0 10px hsl(var(--game-success) / 0)' }
+				},
+				'pulse-error': {
+					'0%, 100%': { boxShadow: '0 0 0 0 hsl(var(--game-error) / 0.7)' },
+					'70%': { boxShadow: '0 0 0 10px hsl(var(--game-error) / 0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'flip': 'flip 0.6s ease-in-out',
+				'bounce-in': 'bounce-in 0.6s ease-out',
+				'pulse-success': 'pulse-success 0.6s ease-out',
+				'pulse-error': 'pulse-error 0.6s ease-out'
 			}
 		}
 	},
